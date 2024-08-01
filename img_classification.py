@@ -54,7 +54,7 @@ with nn.parameter_scope("fineturning_fc"):
 
 #テスト用
 #gloval_average_pooling層までの出力
-y_valid = model(image_valid,force_global_pooling=True,use_up_to="pool",training=True)
+y_valid = model(image_valid,force_global_pooling=True,use_up_to="pool",training=False)
 
 #最後の全結合層を作成、出力を6クラスにする
 with nn.parameter_scope("fineturning_fc"):
